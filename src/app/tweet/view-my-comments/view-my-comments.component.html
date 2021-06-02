@@ -1,0 +1,14 @@
+<mat-card *ngIf="!commentcheck">
+    <mat-card-content>
+        <div class='tweetHead'>
+         <h2 >MyTweet &nbsp;&nbsp; : &nbsp;&nbsp; {{commentList[0].tweetPost}}</h2>
+     </div>
+         <div *ngFor="let list of commentList">
+             <h3><span class="userId">@{{list.firstName}}</span> &nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">{{list.comments}}</span></h3>
+             
+         </div>
+     </mat-card-content>
+ </mat-card>
+ <mat-card  *ngIf="commentcheck">
+     <mat-sub-title>"no comments yet"</mat-sub-title>
+ </mat-card>
